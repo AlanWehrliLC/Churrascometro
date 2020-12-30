@@ -1,12 +1,11 @@
-import '../styles'
 
 import React from 'react'
 
 function Barbecue(){
-const adults = window.document.getElementById('adults').value
-const kids = window.document.getElementById('kids').value
-const duration = window.document.getElementById('duration').value
-const result = window.document.getElementById('result')
+//const adults = window.document.getElementById('adults').value
+//const kids = window.document.getElementById('kids').value
+//const duration = window.document.getElementById('duration').value
+//const result = window.document.getElementById('result')
 
 function calculation(){
   const inputAdults = adults
