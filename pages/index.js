@@ -1,3 +1,8 @@
+import '../styles'
+
+import React from 'react'
+
+function Barbecue(){
 const adults = window.document.getElementById('adults').value
 const kids = window.document.getElementById('kids').value
 const duration = window.document.getElementById('duration').value
@@ -40,3 +45,18 @@ function drinkPerPerson(duration){
     return 1000
   }
 }
+
+return(
+    <div className='container'>
+        <h1 className='barbecue'>Barbecue</h1>
+        <input className='inputGlobal' id='adults' name='adults' type='number' placeholder='Adults' />
+        <input className='inputGlobal' id='kids' name='kids' type='number' placeholder='Kids' />
+        <input className='inputGlobal' id='duration' name='duration' type='number' placeholder='Duration (h)' />
+        <button className='calculationGlobal' onClick={calculation}>Calculation</button>
+        <div id='result'></div>
+      </div>
+)
+
+}
+
+export default Barbecue
