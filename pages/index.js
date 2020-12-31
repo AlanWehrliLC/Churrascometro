@@ -1,24 +1,40 @@
-
-import React from 'react'
+import { useState } from 'react'
 
 function Barbecue(){
-//const adults = window.document.getElementById('adults').value
-//const kids = window.document.getElementById('kids').value
-//const duration = window.document.getElementById('duration').value
-//const result = window.document.getElementById('result')
+const [adults, setAdults] = useState([])
+const [adult, setAdult] = useState()
+
+const [kids, setKids] = useState([])
+const [kid, setKid] = useState()
+
+const [durations, setDurations] = useState([])
+const [duration, setDuration] = useState()
+
+const [resultado, setResultado] = useState()
 
 function calculation(){
-  const inputAdults = adults
-  const inputKids = kids
-  const inputDuratio = duration
+  setAdults([adults, adult])
+  setKids([kids,kid])
+  setDurations([durations,duration])
 
-  const todalAmountOfMeat = meatPerPerson(inputDuratio) * inputAdults + (meatPerPerson(inputDuratio) / 2 * inputKids)
-  const todalAmountOfBeer = beerPerPerson(inputDuratio) * inputAdults
-  const todalAmountOfDrink = drinkPerPerson(inputDuratio) * inputAdults + (meatPerPerson(inputDuratio) / 2 * inputKids)
+  const inputAdults = adults.shift(adult)
+  const inputKids = kids.shift(kid)
+  const inputDurations = durations.shift(duration)
 
-  result.innerHTML = `<p>${todalAmountOfMeat / 1000}Kg de Meat<p/>`
-  result.innerHTML += `<p>${Math.ceil(todalAmountOfBeer / 355)} Beer Cans<p/>`
-  result.innerHTML += `<p>${Math.ceil(todalAmountOfDrink / 2000)} Drink Bottle<p/>`
+  const todalAmountOfMeat = meatPerPerson(inputDurations) * inputAdults + (meatPerPerson(inputDurations) / 2 * inputKids)
+  const todalAmountOfBeer = beerPerPerson(inputDurations) * inputAdults
+  const todalAmountOfDrink = drinkPerPerson(inputDurations) * inputAdults + (meatPerPerson(inputDurations) / 2 * inputKids)
+
+  const screenDiv = `
+  <p>${todalAmountOfMeat / 1000}Kg de Meat<p/>
+  <p>${Math.ceil(todalAmountOfBeer / 355)} Beer Cans<p/>
+  <p>${Math.ceil(todalAmountOfDrink / 2000)} Drink Bottle<p/>
+  `
+  return setResultado(<div>
+    <p>{todalAmountOfMeat / 1000}Kg de Meat</p>
+    <p>{Math.ceil(todalAmountOfBeer / 355)} Beer Cans</p> 
+    <p>{Math.ceil(todalAmountOfDrink / 2000)} Drink Bottle</p> 
+  </div>)
 }
 
 function meatPerPerson(duration){
@@ -45,17 +61,17 @@ function drinkPerPerson(duration){
   }
 }
 
+
 return(
     <div className='container'>
         <h1 className='barbecue'>Barbecue</h1>
-        <input className='inputGlobal' id='adults' name='adults' type='number' placeholder='Adults' />
-        <input className='inputGlobal' id='kids' name='kids' type='number' placeholder='Kids' />
-        <input className='inputGlobal' id='duration' name='duration' type='number' placeholder='Duration (h)' />
+        <input className='inputGlobal' value={adult} onChange={(e)=>setAdult(e.target.value)} name='adults' type='number' placeholder='Adults'  />
+        <input className='inputGlobal' value={kid} onChange={(e)=>setKid(e.target.value)} name='kids' type='number' placeholder='Kids'  />
+        <input className='inputGlobal' value={duration} onChange={(e)=>setDuration(e.target.value)} name='duratio' type='number' placeholder='Duratio'  />
         <button className='calculationGlobal' onClick={calculation}>Calculation</button>
-        <div id='result'></div>
+        {resultado}
       </div>
 )
-
 }
 
 export default Barbecue
