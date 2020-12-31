@@ -83,7 +83,7 @@ return(
         <input className='inputGlobal' value={kid} onChange={(e)=>setKid(e.target.value)} name='kids' type='number' placeholder='Kids'  />
         <input className='inputGlobal' value={duration} onChange={(e)=>setDuration(e.target.value)} name='duratio' type='number' placeholder='Duratio'  />
         <input className='calculationGlobal' type='button'  onClick={calculation} value='Calculation' />
-        {resultado}
+        <div id='textBarbecue' >{resultado}</div>
       </div>
 )
 }
