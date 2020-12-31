@@ -44,7 +44,7 @@ function calculation(){
 
   if(typeof inputAdults === 'undefined'  && typeof inputKids === 'undefined' && typeof inputDurations === 'undefined'){
     return setResultado(welcome)
-  }if(inputAdults > 0 && inputKids > 0 && inputDurations > 0){
+  }if(inputAdults > 0 || inputKids > 0 || inputDurations > 0){
     return setResultado(screenDiv)
   }else{
     setResultado(screenAlert)
