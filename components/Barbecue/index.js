@@ -79,10 +79,23 @@ function drinkPerPerson(duration){
 return(
     <div className='container'>
         <h1 className='barbecue'>Barbecue</h1>
-        <input className='inputGlobal' value={adult} onChange={(e)=>setAdult(e.target.value)} name='adults' type='number' placeholder='Adults'  />
-        <input className='inputGlobal' value={kid} onChange={(e)=>setKid(e.target.value)} name='kids' type='number' placeholder='Kids'  />
-        <input className='inputGlobal' value={duration} onChange={(e)=>setDuration(e.target.value)} name='duratio' type='number' placeholder='Duratio'  />
+        <div className='form'>
+          <p className='formP'>Quantidade de adultos</p>
+          <input className='inputGlobal' value={adult} onChange={(e)=>setAdult(e.target.value)} name='adults' type='number' placeholder='Adultos'  />
+        </div>
+        
+        <div className='form'>
+          <p className='formP'>Quantidade de crianças</p>
+          <input className='inputGlobal' value={kid} onChange={(e)=>setKid(e.target.value)} name='kids' type='number' placeholder='crianças'  />
+        </div>
+
+        <div className='form'>
+          <p className='formP'>Duração do churrasco</p>
+          <input className='inputGlobal' value={duration} onChange={(e)=>setDuration(e.target.value)} name='duratio' type='number' placeholder='Duração'  />
+        </div>
+
         <input className='calculationGlobal' type='button' onMouseUp={calculation} onMouseDown={calculation} value='Calculation' />
+
         <div id='textBarbecue' >{resultado}</div>
       </div>
 )
