@@ -8,7 +8,7 @@
   .alignments{
     display: flex;
     flex-direction: row;
-    background: url('../components/assets/street_food.svg') -1% 50% no-repeat;
+    background: url('../components/assets/street_food.svg') 1% 50% no-repeat;
   }
 
   .divImas{
