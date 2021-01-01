@@ -63,7 +63,7 @@ color: #FFFFFF;
   .alignments{
     display: flex;
     flex-direction: row;
-    background: url('../components/assets/street_food.svg') 1% 50% no-repeat;
+    background: url('../public/assets/street_food.svg') 1% 50% no-repeat;
     overflow: hidden;
   }
 
