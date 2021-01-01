@@ -25,9 +25,9 @@ function calculation(){
   const todalAmountOfDrink = drinkPerPerson(inputDurations) * inputAdults + (meatPerPerson(inputDurations) / 2 * inputKids)
 
   const screenDiv = (<div>
-    <p>{todalAmountOfMeat / 1000}Kg de Meat</p>
-    <p>{Math.ceil(todalAmountOfBeer / 355)} Beer Cans</p> 
-    <p>{Math.ceil(todalAmountOfDrink / 2000)} Drink Bottle</p> 
+    <p>{todalAmountOfMeat / 1000}Kg de Carne </p>
+    <p>{Math.ceil(todalAmountOfBeer / 355)} Cerveja</p> 
+    <p>{Math.ceil(todalAmountOfDrink / 2000)} Garrafa de bebida</p> 
   </div>)
 
   const screenAlert = (<div>
@@ -78,7 +78,7 @@ function drinkPerPerson(duration){
 
 return(
     <div className='container'>
-        <h1 className='barbecue'>Barbecue</h1>
+        <h1 className='barbecue'>Churrascometro</h1>
         <div className='form'>
           <p className='formP'>Quantidade de adultos</p>
           <input className='inputGlobal' value={adult} onChange={(e)=>setAdult(e.target.value)} name='adults' type='number' placeholder='Adultos'  />
