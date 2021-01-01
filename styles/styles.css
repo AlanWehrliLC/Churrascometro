@@ -2,6 +2,62 @@
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    
+  }
+
+  .divUnderMaintenance{
+    width: 100%;
+    background-color: red;
+}
+
+.divUnderMaintenance h1{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.headerGlobal {
+display: flex;
+background-color: #45413C;
+padding: 10px;
+}
+.headerGlobalImageLogo {
+width: 70px;
+height: 70px;
+display: flex;
+}
+.headerGlobalDivAlignment {
+
+display: flex;
+margin-left: auto;
+
+}
+.headerGlobalDivButton {
+margin: auto;
+margin-right: 10vw;
+}
+
+a {
+text-decoration: none;
+font-size: 18px;
+margin: auto;
+padding: auto;
+color: #FFFFFF;
+}
+
+
+
+
+
+  .pageGlobal {
+  padding: 20px ;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #87898C;
+  font-size: 20px;
   }
 
   .alignments{
@@ -89,11 +145,6 @@
   #textBarbecue p{
     margin-bottom: 10px;
   }
-
-
-
-
-
 
   footer {
     width: 100%;
