@@ -2,13 +2,13 @@
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
 
   .alignments{
     display: flex;
     flex-direction: row;
     background: url('../components/assets/street_food.svg') 1% 50% no-repeat;
+    overflow: hidden;
   }
 
   .divImas{
@@ -88,6 +88,31 @@
 
   #textBarbecue p{
     margin-bottom: 10px;
+  }
+
+
+
+
+
+
+  footer {
+    width: 100%;
+    
+    position: absolute;
+    color: #000000;
+    background-color: #87898C;
+  }
+
+  footer .divFooter{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+
+  footer .divFooter a {
+    color: rgb(255, 255, 255);
   }
 
   @media (max-width: 600px){
