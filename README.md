@@ -16,7 +16,7 @@
 
 ## Sobre o Projeto
 
-Sitema para calcular a quantidade de comida e bebida necessária para um churrasco,
+Sistema para calcular a quantidade de comida e bebida necessária para um churrasco,
 </br>
 com base nas informações seguintes:
 </br>
