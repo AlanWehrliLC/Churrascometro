@@ -2,11 +2,11 @@
    Projeto desenvolvido no curso do programadorBR
 </div>
 
+</br>
+
 <p align="center">
   <img alt="churrascometro" src=".github/churrascometro.png" width="100%">
 </p>
-
-</br>
 
 <p align="center">
   <a href="#sobre-o-projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
