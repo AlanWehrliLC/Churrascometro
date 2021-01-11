@@ -6,6 +6,8 @@
   <img alt="churrascometro" src=".github/churrascometro.png" width="100%">
 </p>
 
+</br>
+
 <p align="center">
   <a href="#sobre-o-projeto">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#tecnologias-utilizadas-no-curso">Tecnologias utilizadas no curso</a>&nbsp;&nbsp;&nbsp;|&nbsp;
